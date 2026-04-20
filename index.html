@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICKY · The Babysitter · B&W + Neon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000;
+            font-family: 'Comic Neue', 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            color: #f0f0f0;
+        }
+
+        /* Main container – black card with white border */
+        .vicky-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #0a0a0a;
+            border-radius: 40px;
+            border: 2px solid #ff44cc;
+            box-shadow: 0 0 20px #ff44cc80, 10px 10px 0 #222;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: #111;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #ff44cc;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 4px 4px 0 #aa22aa;
+            letter-spacing: 2px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ff44cc;
+            color: #000;
+            font-weight: bold;
+            padding: 0.3rem 1.5rem;
+            border-radius: 40px;
+            margin: 0.8rem 0;
+            font-size: 1.2rem;
+            box-shadow: 0 3px 0 #aa22aa;
+        }
+
+        .name-strip {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            background: #1a1a1a;
+            padding: 0.8rem;
+            border-radius: 50px;
+            margin: 1rem 2rem 0;
+            border: 1px solid #ff44cc;
+        }
+
+        .name-strip span {
+            background: #000;
+            color: #ff66dd;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 1px solid #ff44cc;
+        }
+
+        /* Content */
+        .content {
+            padding: 2rem 2.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: #141414;
+            border-radius: 30px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ff44cc;
+            box-shadow: 0 5px 0 #222;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            color: #ff88ee;
+            border-left: 8px solid #ff44cc;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Code blocks */
+        .code-block {
+            background: #1e1e1e;
+            padding: 1rem;
+            border-radius: 20px;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #ff44cc;
+            color: #f8f8f2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .code-text {
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: #ff44cc;
+            border: none;
+            color: #000;
+            font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.1s;
+        }
+
+        .copy-btn:hover {
+            background: #ff88ee;
+        }
+
+        /* Alias grid */
+        .alias-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .alias-item {
+            flex: 1;
+            background: #1a1a1a;
+            border-radius: 30px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ff44cc;
+        }
+
+        .alias-item h3 {
+            font-size: 1.8rem;
+            color: #ff88ee;
+        }
+
+        button {
+            background: #ff44cc;
+            border: none;
+            font-weight: bold;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: inherit;
+            margin: 0.5rem 0;
+        }
+
+        button a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 1rem;
+            border-top: 2px solid #ff44cc;
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: #ff88ee;
+        }
+
+        kbd {
+            background: #333;
+            padding: 0.2rem 0.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+        }
+
+        hr {
+            border-color: #ff44cc;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="vicky-container">
+    <div class="header">
+        <h1>🧸 VICKY · THE BABYSITTER</h1>
+        <div class="badge">🚫 NO ROOT · TERMUX · ROOTLESS</div>
+        <div class="name-strip">
+            <span>🔥 BOJACK</span>
+            <span>🕯️ SOI</span>
+            <span>🏰 RAVENSMEAD</span>
+            <span>🛠️ GRANT FEZZY FESTERS</span>
+        </div>
+        <p style="margin-top: 1rem;">🐉 23 Fairies · Zero Noise · Silent Watchdog</p>
+    </div>
+
+    <div class="content">
+        <!-- GIT CLONE -->
+        <div class="card">
+            <h2>📦 GET THE REPO (git clone)</h2>
+            <div class="code-block">
+                <span class="code-text">git clone git@github.com:philfesters/vicky.git</span>
+                <button class="copy-btn" data-copy="git clone git@github.com:philfesters/vicky.git">COPY</button>
+            </div>
+            <div class="code-block">
+                <span class="code-text">git clone https://github.com/philfesters/vicky.git</span>
+                <button class="copy-btn" data-copy="git clone https://github.com/philfesters/vicky.git">COPY</button>
+            </div>
+            <p>Then: <code>cd vicky</code> and <code>bash vicky.sh</code></p>
+        </div>
+
+        <!-- THREE ALIASES -->
+        <div class="card">
+            <h2>🎭 THE THREE ALIASES</h2>
+            <div class="alias-grid">
+                <div class="alias-item">
+                    <h3><code>vicky</code></h3>
+                    <p>Full 23‑fairy scan</p>
+                    <button class="copy-btn" data-copy="alias vicky='bash ~/vicky.sh'">COPY ALIAS</button>
+                </div>
+                <div class="alias-item">
+                    <h3><code>vicky-watch</code></h3>
+                    <p>Continuous monitoring loop</p>
+                    <button class="copy-btn" data-copy="alias vicky-watch='bash ~/vicky.sh watch'">COPY ALIAS</button>
+                </div>
+                <div class="alias-item">
+                    <h3><code>vicky-quick</code></h3>
+                    <p>Queue builder (fast scan)</p>
+                    <button class="copy-btn" data-copy="alias vicky-quick='bash ~/vicky.sh queue'">COPY ALIAS</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD ALIASES (nano) -->
+        <div class="card">
+            <h2>📝 ADD ALIASES (nano & save)</h2>
+            <div class="code-block">
+                <span class="code-text">nano ~/.bashrc</span>
+                <button class="copy-btn" data-copy="nano ~/.bashrc">COPY</button>
+            </div>
+            <p>Paste these three lines:</p>
+            <div class="code-block">
+                <span class="code-text">alias vicky='bash ~/vicky.sh'<br>alias vicky-watch='bash ~/vicky.sh watch'<br>alias vicky-quick='bash ~/vicky.sh queue'</span>
+                <button class="copy-btn" data-copy="alias vicky='bash ~/vicky.sh'&#10;alias vicky-watch='bash ~/vicky.sh watch'&#10;alias vicky-quick='bash ~/vicky.sh queue'">COPY ALL</button>
+            </div>
+            <p><strong>Save:</strong> <kbd>Ctrl+O</kbd> → <kbd>Enter</kbd> → <kbd>Ctrl+X</kbd><br>
+            <strong>Reload:</strong> <code>source ~/.bashrc</code></p>
+        </div>
+
+        <!-- LAUNCH VICKY -->
+        <div class="card">
+            <h2>🚀 LAUNCH VICKY</h2>
+            <p><strong>Manual (no alias):</strong></p>
+            <div class="code-block">
+                <span class="code-text">bash ~/vicky.sh</span>
+                <button class="copy-btn" data-copy="bash ~/vicky.sh">COPY</button>
+            </div>
+            <div class="code-block">
+                <span class="code-text">bash ~/vicky.sh summary</span>
+                <button class="copy-btn" data-copy="bash ~/vicky.sh summary">COPY</button>
+            </div>
+            <div class="code-block">
+                <span class="code-text">bash ~/vicky.sh watch</span>
+                <button class="copy-btn" data-copy="bash ~/vicky.sh watch">COPY</button>
+            </div>
+            <div class="code-block">
+                <span class="code-text">bash ~/vicky.sh queue</span>
+                <button class="copy-btn" data-copy="bash ~/vicky.sh queue">COPY</button>
+            </div>
+            <p><strong>With aliases (after adding):</strong> <code>vicky</code> | <code>vicky-watch</code> | <code>vicky-quick</code></p>
+            <button onclick="window.open('https://github.com/philfesters/vicky', '_blank')">🐙 GITHUB REPO →</button>
+        </div>
+
+        <!-- NAMES THAT TRAVEL -->
+        <div class="card">
+            <h2>🧙 THE NAMES THAT TRAVEL</h2>
+            <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">BOJACK · SOI · RAVENSMEAD · GRANT FEZZY FESTERS</p>
+            <p style="text-align: center;">"No root. No noise. Just the fairies. And the legend moves with every clone."</p>
+            <hr>
+            <p style="text-align: center;">Part of the <strong>Fezzy Station</strong> command centre — alongside Albert (error monitor) and Sentinel (threat scanner).</p>
+        </div>
+    </div>
+
+    <footer>
+        Vicky · System Integrity Daemon V4 · Codename: The Babysitter · MIT<br>
+        K9 Daemon always watching · Rootless Android Termux · 23 Fairies, one verdict.
+    </footer>
+</div>
+
+<script>
+    // Copy functionality for all copy buttons
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const textToCopy = btn.getAttribute('data-copy');
+            if (!textToCopy) return;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = '✓ COPIED!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 1500);
+            }).catch(() => {
+                btn.innerText = 'ERROR';
+                setTimeout(() => {
+                    btn.innerText = 'COPY';
+                }, 1500);
+            });
+        });
+    });
+</script>
+</body>
+</html>
